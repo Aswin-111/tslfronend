@@ -55,7 +55,7 @@ app.post("/area", (req, res) => {
     `SELECT cust_area FROM cust_mast WHERE comp_code = '${compcode}'`,
     function (err, results) {
       if (err) {
-        return res.json({ status: "failed" });
+        return res.status(404).json({ status: "failed" });
       } else {
         return res.json({ status: "success", data: results });
       }
@@ -67,8 +67,9 @@ app.post("/cust", (req, res) => {
   const { area, compcode } = req.body;
 
   db.query(
-    `SELECT * FROM cust_mast WHERE comp_code = '${compcode}' AND area = '${area}'`,
+    `SELECT * FROM cust_mast WHERE comp_code = '${compcode}' AND cust_area = '${area}'`,
     function (err, results) {
+        console.log(err)
       if (err) {
         return res.json({ status: "failed" });
       }
