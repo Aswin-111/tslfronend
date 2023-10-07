@@ -82,7 +82,7 @@ app.post("/cust", (req, res) => {
 app.post("/items", (req, res) => {
   const { compcode, custcode } = req.body;
   db.query(
-    `SELECT * FROM item_mast WHERE comp_code = '${custcode}' AND cust_code = '${custcode}'`,
+    `SELECT * FROM item_mast WHERE comp_code = '${compcode}' AND cust_code = '${custcode}'`,
     function (err, results) {
       if (err) {
         return res.json({ status: "failed" });
