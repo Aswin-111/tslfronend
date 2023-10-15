@@ -1,0 +1,41 @@
+    insert into item_mast
+    (comp_code,item_code,item_name,item_qty,item_price1,item_price2,item_price3,item_price4,
+    item_price5,item_mrp,item_cost,item_netcost,item_tax,item_disc,item_cess,hsn_code,item_uom) values
+    ("10001","2","Horlicks 500gm",25,200,195,190,185,null,250,100,118,18,2,null,"123456","NOS"),
+    ("10001","1","Horlicks 1KG",15,400,380,370,360,500,null,200,136,18,2,"123456",null,"NOS"),
+    ("10001","3","Colgate 100gm",45,100,90,85,80,150,null,50,50,0,0,"546871",null,"NOS"),
+    ("10001","4","Medimix Soap",40,38,37,0,50,50,null,50,0,0,"987456",null,"NOS"),
+    ("10002","2", "CHURIDAR",100,1000,0,0,0,0,null,500,500,0,2,"123456",null,"NOS"),
+    ("10002","1","KURTI",80,1500,0,0,0,0,null,600,600,0,2,"123456",null,"NOS"),
+    ("10002","3" ,"JEANS",	65,1100,0,0,0,0,null,700,700,0,0,"546871",null,"NOS"),
+    ("10002","4","LEGGINS",	10,890,0,0,0,0,null,800,800,0,0,"987456",null,"NOS");
+    ${req.body[i].comp_code}",${req.body[i].ord_date},
+      "${req.body[i].ord_time}",
+      "${req.body[i].item_code}",
+      "${req.body[i].item_name}",
+      "${req.body[i].item_qty}",
+      "${req.body[i].item_price}",
+      "${req.body[i].item_tax}",
+      "${req.body[i].item_disc}",
+      "${req.body[i].item_cess}",
+      "${req.body[i].trx_total}",
+      "${req.body[i].status_flag}",
+      "${req.body[i].act_code}",
+      "${req.body[i].act_name}",
+      
+      "${req.body[i].act_address}",
+      "${req.body[i].act_phone}",
+      "${req.body[i].act_area}",
+
+      "${req.body[i].act_address}",
+      "${req.body[i].trx_disc}",
+
+
+      "${req.body[i].trx_netamount}",
+    
+    "${req.body[i].user_code}"
+      "${req.body[i].user_name}",
+      
+      "${req.body[i].lat_long}",
+      
+      "${req.body[i].system_name}

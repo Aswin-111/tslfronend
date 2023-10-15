@@ -1,0 +1,69 @@
+[
+  {
+    "comp_code": "10001",
+    "ord_no": "1",
+    "ord_date": "datetime.date()",
+    "ord_time": "datetime.now()",
+    //"act_code": "1",
+    //"act_name": "bismi",
+    //"act_address": "New Bazar, Alappuzha",
+    //"act_phone": "9072999927",
+    //"act_area": "Alappuzha",
+    //"act_type": "1",
+    //"trx_disc": "null",
+    //"trx_total": "null",
+    //"trx_netamount": "null",
+    //"status_flag": "0",
+    "user_code": "1",
+    "user_name": "afsal",
+    "lat_long": "1.2345555332323,1,113355",
+    "system_name": "Redmi"
+  }
+]
+
+{
+    //"comp_code" : "10001",
+    "ord_no" : "1",
+    "line_no" : "1",
+    //"ord_date" : "datetime.now()", 
+    //"item_code" : "1",
+    //"item_name" : "Horlicks",
+    //"item_qty" : "5",
+    
+    //"item_price" : "150",
+    //"item_tax" : "null",
+    //"item_disc" : "null",
+    //"item_cess" : "null",
+    //"trx_total" : "750",
+
+    //"status_flag" : "0"
+}
+
+{
+    "comp_code" : "10001",
+    "ord_date" : "datetime.now()",
+    "ord_time": "datetime.now()",
+    "item_code" : "1",
+    "item_name" : "Horlicks",
+    "item_qty" : "5",
+    "item_price" : "150",
+    "item_tax" : "null",
+    "item_disc" : "null",
+    "item_cess" : "null",
+    "trx_total" : "750",
+    "status_flag" : "0",
+    "act_code": "1",
+    "act_name": "bismi",
+    "act_address": "New Bazar, Alappuzha",
+    "act_phone": "9072999927",
+    "act_area": "Alappuzha",
+    "act_type": "1",
+    "trx_disc": "null",
+    "trx_total": "null",
+    "trx_netamount": "null",
+    "status_flag": "0",
+    "user_code": "1",
+    "user_name": "afsal",
+    "lat_long": "1.2345555332323,1,113355",
+    "system_name": "Redmi"
+}
