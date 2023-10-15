@@ -29,7 +29,7 @@ app.post("/login", (req, res) => {
   console.log(username, password,compcode);
 
   db.query(
-    `SELECT * FROM user_mast WHERE user_name = '${username}' AND user_password = '${password}' AND comp_code = '${compcode}'`,
+    `SELECT * FROM user_mast WHERE user_name = '${username}' AND user_password = '${password}'`,
     function (err, result) {
       console.log('err',err)
       if (err) {
@@ -50,23 +50,10 @@ app.post("/login", (req, res) => {
 
 
 
-app.post("/area", (req, res) => {
-  const { compcode } = req.body;
 
-  db.query(
-    `SELECT cust_area FROM cust_mast WHERE comp_code = '${compcode}'`,
-    function (err, results) {
-      if (err) {
-        return res.status(404).json({ status: "failed" });
-      } else {
-        return res.json({ status: "success", data: results });
-      }
-    }
-  );
-});
 
 app.post("/cust", (req, res) => {
-  const { area, compcode } = req.body;
+  const { compcode } = req.body;
   
 
 
@@ -75,7 +62,7 @@ app.post("/cust", (req, res) => {
 
   console.log(area,compcode);
   db.query(
-    `SELECT * FROM cust_mast WHERE comp_code = '${compcode}' AND cust_area = '${area}'`,
+    `SELECT * FROM cust_mast WHERE comp_code = '${compcode}'`,
     function (err, results) {
         console.log(err)
       if (err) {
@@ -115,8 +102,11 @@ try{
       return res.json({ status: "failed" });  
     }
     if(results.length > 0){
-      console.log(typeof results[0].ord_number)
-      let ord_number = results[0].ord_number + 1;
+      let ord_number = 1;
+      
+      if(Number.isInteger(results[0].ord_number)){
+      ord_number = results[0].ord_number + 1;
+      }
         db.query(
       `INSERT INTO ord_mast(comp_code,ord_no,ord_date,ord_time,act_code,act_name,act_address,act_phone,act_area,act_type,trx_disc,trx_total,trx_netamount,status_flag,user_code,user_name,lat_long,system_name) VALUES("${req.body[0].comp_code}","${ord_number}","${req.body[0].ord_date.split(" ")[0]}","${req.body[0].ord_time.split(" ")[1].split(".")[0]}","${req.body[0].act_code}","${req.body[0].act_name}","${req.body[0].act_address}","${req.body[0].act_phone}","${req.body[0].act_area}","${req.body[0].act_type}","${req.body[0].trx_disc}","${req.body[0].trx_total}","${req.body[0].trx_netamount}","${req.body[0].status_flag}","${req.body[0].user_code}","${req.body[0].user_name}","${req.body[0].lat_long}","${req.body[0].system_name}")`,
        
@@ -184,4 +174,4 @@ catch (err) {
 }
   })
 
-app.listen(5500,()=>console.log('Server has started at 5500'));
+app.listen(3000,()=>console.log('Server has started at 3000'));
