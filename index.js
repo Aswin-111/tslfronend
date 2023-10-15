@@ -9,7 +9,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
 
-  password:  "pass@123",
+  password:  "E@asybiz_d@_t@b@se_1234567",
   database: "ezbiz",
 });
 
@@ -54,13 +54,6 @@ app.post("/login", (req, res) => {
 
 app.post("/cust", (req, res) => {
   const { compcode } = req.body;
-  
-
-
-
-
-
-  console.log(area,compcode);
   db.query(
     `SELECT * FROM cust_mast WHERE comp_code = '${compcode}'`,
     function (err, results) {
@@ -90,7 +83,14 @@ app.post("/items", (req, res) => {
     }
   );
 });
-   
+  
+
+app.post("/query",(req,res)=>{
+db.query(`${req.body.query}`,function (err,res){
+if(err) return res.json({err})
+return res.json({status:'success',data:res})
+})
+})
 app.post("/order", (req, res) => {
   
 
@@ -158,20 +158,16 @@ try{
             
           })
         }
-        // return res.json({ status: "success", data: results });
-
-        
-      
-  
+        return res.json({ status: "success", data: fields }); 
   });
 
     }
-
 })
 }
 catch (err) {
   console.log(err)
 }
+ 
   })
 
 app.listen(3000,()=>console.log('Server has started at 3000'));
