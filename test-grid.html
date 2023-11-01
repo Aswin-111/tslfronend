@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="test-grid.css">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Poppins:wght@100;300;400;600;700&family=Work+Sans:wght@100;200;400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+     
+
+    </style>
+</body>
+<div class="hero">
+    <div class="hero-left">
+    </div>
+<div class="parent-container">
+    
+    <div class="progress-bar">
+        
+    </div>
+    <div class="parent-heading">
+        Satyam vada |  dharmam chara
+    </div>
+<div class="parent">
+    <input type="text" class = "fname" placeholder = "First name">
+    <input type="text" class = "lname" placeholder = "Last name">
+
+    <input type="text" class = "email" placeholder = "Email">
+
+    
+    <div class="dob-select-grp">
+    <input type="text" class = "dob" placeholder = "DOB">
+    <div class="select-grp" style = "height:1vh;display:flex; flex-direction:column;">
+        <img src = "select.png" class = "select-img">
+        <div class="select-grp--rad">
+            <input type="radio" name="select" id="">
+            <input type="radio" name="select" id="">
+        </div>
+    </div>
+</div>
+    <!-- <div class="div5"> </div> -->
+    <select  class = "count" >
+    <option>Australia</option>
+    <option>Brazil</option>
+    <option>Canada</option>
+    <option>Denmark</option>
+    <option selected = "selected">India</option>
+    </select>
+
+    <div class="phone-grp">
+        <div class="country-flag">
+
+        </div>
+        <input type="text" class = "phone" placeholder = "+91">
+
+    </div>
+
+
+
+    
+
+   
+    
+        
+
+        
+        <div class="source-grp">
+            <div class="search-icon">
+            🔍
+            </div>
+            <div class="source-grp-1">Social media <input style = "width:1vw; height:4vh; background:none;"type = "radio" name = "source"></div>
+            <div class="source-grp-2">Reference <input style = "width:1vw; height:4vh; background:none;"type = "radio" name = "source"></div>
+            <div class="source-grp-3">News <input style = "width:1vw; height:4vh; background:none;"type = "radio" name = "source"></div>
+        </div>
+        
+
+
+  
+           <select class = "language"><option>Languages</option> <option >English </option></select>
+
+           <input type="text" class = "special_remarks" placeholder = "Special remarks">
+            
+                
+           
+           
+           
+           
+           <input class = "submit" type="submit" value ="Submit">
+
+    
+    </div>
+    
+    <div class="footer">
+        <div class="footer-sub-grp"><span class = "footer-update">39997</span>
+        <span class ="footer-head">Total meditators</span></div>
+        <div class="footer-sub-grp"><span class = "footer-update">
+            1136
+        </span>
+        <span class ="footer-head">Working numbers</span>
+    </div>
+        <div class="footer-sub-grp"><span class = "footer-update">39850</span><span class ="footer-head">Benefactories</span></div>
+        <div class="footer-sub-grp">
+            <span class = "footer-update">1648</span>
+            <span class ="footer-head">Classes</span>
+        </div>
+    </div>
+    
+</div>
+<div class="pop hide">
+<div class="pop-head">
+    Confirm Email  & Phone Number ?
+</div>
+<div class="pop-content">
+   
+
+<span class="message"> +91 9072156487 & jasmin@gmail.com</span>
+<span class="prompt">
+Is this OK , or Would you like to edit  the Email & PhoneNumber ? 
+</span> 
+<div class="pop-btn">
+    <button class="ok">OK</button>
+
+    <button class="edit">Edit</button>
+</div>
+</div>
+
+</div>
+
+<div class="otp hide">
+    <div class="otp-head">
+        Enter otp
+    </div>
+    
+    <div class="otp-content">
+        <div class="otp-input-grp">
+            
+            
+            <input id = 'otp-input' type="text">
+            <input id = 'otp-input' type="text">
+            <input id = 'otp-input' type="text">
+            <input id = 'otp-input' type="text">
+        </div>
+        <div class="otp-timer">
+1:30
+        </div>
+
+        <div class="otp-btn-grp">
+            <button class="otp-submit">Submit</button><button class="resend">Resend </button>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    let sub = document.querySelector(".submit")
+    let editbtn = document.querySelector(".edit")
+   
+    let otp = document.querySelector(".otp")
+    let okbtn = document.querySelector(".ok")
+
+    
+    
+    
+    let div = document.querySelector('.parent-container')
+
+
+
+
+
+
+
+    
+
+    let popup = document.querySelector(".pop")
+    sub.addEventListener("click",()=>{
+        popup.classList.toggle("hide")
+        
+        div.classList.toggle("blur")
+    })
+
+
+    editbtn.addEventListener("click",()=>{
+        popup.classList.toggle("hide")
+        
+        div.classList.toggle("blur")
+    })
+    
+    okbtn.addEventListener("click",()=>{
+        popup.classList.toggle("hide")
+        
+        // div.classList.toggle("blur")
+
+        otp.classList.toggle("hide")
+    })
+
+</script>
+</html>
