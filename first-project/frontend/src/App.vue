@@ -1,20 +1,12 @@
+/* eslint-disable */
 <template>
- 
   <router-view/>
+</template>
+<script>
 
- </template>
- 
- <script>
- 
- 
- export default {
- 
-   name: "App"
-  
- };
- </script>
- 
- <style>
- 
- </style>
- 
+export default {
+  name : "App"
+}
+</script>
+<style>
+</style>

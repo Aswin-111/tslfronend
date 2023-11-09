@@ -2,17 +2,88 @@
     margin: 0;
   
     font-family: "Poppins", sans-serif;
+   
   }
   .hero {
     display: flex;
+  
+ 
+   
   }
+
+  
+
+
+
+  .multiselect {
+    position: absolute !important;
+    width: 22vw !important;
+    right: 6vw !important;
+    bottom: 19vw !important;
+    height:8vh;
+   
+  }
+
+.hero-left-content{
+  height:20%;
+  position: absolute;
+  bottom:16vh;
+  right:10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.proceed{
+  background:rgba(0, 0, 0, 0.26);
+  border:none;
+  color:white;
+  height:7vh;
+  
+}
+
+@keyframes slideInFromRight {
+  0% {
+      clip-path: inset(0 0% 0 0);
+  }
+  100% {
+      clip-path: inset(0 67% 0 0);
+  }
+}
+.slide {
+  width: 200px;
+  height: 200px;
+  background-color: blue; /* Adding a background color for visibility */
+  /* clip-path: polygon(0 0, 31% 0, 31% 100%, 0% 100%); */
+  animation: 0.7s ease-out 0s 1 slideInFromRight;
+  clip-path: inset(0 67% 0 0);
+
+}
+
   .hero-left {
+    position: relative;
+    z-index:1000;
+    background-image: url("./step 1.png");
+    background-repeat: no-repeat;
+  
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+
+
+  }
+  .hero-left-add {
+  
+    position: relative;
+    z-index:1000;
     background-image: url("./step 1.png");
     background-repeat: no-repeat;
   
     background-size: auto 100%;
     width: 38vw;
     height: 100vh;
+
+
+
   }
   .parent-heading {
     color: #05616d;
@@ -214,21 +285,22 @@
   
   .progress-bar {
     width: 72.5vw;
-    height: 2vh;
+   
     background-color: rgba(7, 98, 109, 1);
     position: absolute;
     top: 0;
     z-index: 1500;
-    transition: all 0.5s ease-in-out;
+    height: 8vh;
+   
   }
-  .progress-bar:hover {
+  /* .progress-bar:hover {
     width: 72.5vw;
     height: 7vh;
     background-color: rgba(7, 98, 109, 1);
     position: absolute;
     top: 0;
     z-index: 1500;
-  }
+  } */
   .parent {
     height: 60vh;
     width: 60vw;
@@ -322,6 +394,9 @@
     padding-left: 11px;
   }
   .select-grp {
+    height: 1vh;
+    display: flex;
+    flex-direction: row;
     position: relative;
   }
   
@@ -485,6 +560,7 @@
     }
     .dob {
       width: 23vw;
+      max-height:7vh;
     }
     .count {
       grid-area: 4 / 3 / 5 / 4;
